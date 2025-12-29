@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* CSS RESET */
+/* ------------- */
+
+:root {
+  /* Font */
+  --default-font: "DM Sans", sans-serif;
+
+  /* Neutral */
+  --neutral-900: #12131a;
+  --neutral-800: #21222c;
+  --neutral-700: #2a2b37;
+  --neutral-600: #404254;
+  --neutral-200: #e4e4ef;
+  --neutral-100: #f2f2f7;
+  --neutral-000: #ffffff;
+
+  /* Purple */
+  --purple-400: #d3a0fa;
+  --purple-500: #c27cf8;
+
+  /* Yellow */
+  --yellow-500: #ff9f00;
+
+  /* Orange */
+  --orange-500: #fe8159;
+  --orange-800: #da3701;
+}
+
+.text-preset-1 {
+  font-family: var(--default-font);
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+
+.text-preset-1-mobile {
+  font-family: var(--default-font);
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+
+.text-preset-2 {
+  font-family: var(--default-font);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+.text-preset-3 {
+  font-family: var(--default-font);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.6px;
+}
+
+.text-preset-4 {
+  font-family: var(--default-font);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.6px;
+}
+
+/* Start of App */
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--neutral-900);
+}
+
+.project-container {
+  min-width: 990px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+
+  /* Dark Theme */
+}
+
+/* There's 4 divs inside the project container */
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+}
+
+.theme-toggle {
+}
+/* ------------------------------------- */
+
+.title {
+  /* text-align: center; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--neutral-000);
+}
+
+.title h1 {
+  width: 700px;
+  text-align: center;
+}
+
+/* ------------------------------------- */
+
+.text-input-container {
+  width: 100%;
+}
+
+.text-input-container textarea {
+  appearance: none;
+  width: 100%;
+  min-height: 200px;
+  border-radius: 12px;
+  background-color: var(--neutral-800);
+  outline: 1px solid var(--neutral-700);
+  padding: 20px;
+  color: var(--neutral-000);
+}
+
+.text-input-info {
+}
+
+.text-input-options {
+}
+
+#input-reading-time {
+}
+
+/* ------------------------------------- */
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.results-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.letter-density-container {
+}
+
+/* light-theme */
