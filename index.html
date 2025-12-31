@@ -23,17 +23,98 @@
         </h1>
       </div>
       <div class="text-input-container">
-        <textarea name="" id="" class="text-preset-3"></textarea>
+        <textarea name="" id="userInput" class="text-preset-3">
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor expedita accusantium veritatis necessitatibus quod molestiae illum architecto, tenetur, quas molestias reiciendis vitae deleniti adipisci porro perspiciatis et optio, provident similique!
+        </textarea>
         <div class="text-input-info">
-          <div class="text-input-options"></div>
-          <div id="input-reading-time">
-            <small>Approximate Reading time</small>
+          <div class="text-input-options">
+            <div class="checkbox-options">
+              <div class="checkbox1">
+                <input
+                  type="checkbox"
+                  id="exclude"
+                  name="exclude"
+                  value="exclude"
+                />
+                <label for="exclude" class="text-preset-4"
+                  >Exclude Spaces</label
+                >
+              </div>
+
+              <div class="checkbox2">
+                <input
+                  type="checkbox"
+                  id="chracter-limit"
+                  name="chracter-limit"
+                  value="chracter-limit"
+                />
+                <label for="chracter-limit" class="text-preset-4"
+                  >Set Character Limit</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="reading-time">
+            <p class="text-preset-4">Approx. reading time <1minute</p>
           </div>
         </div>
       </div>
       <div class="results">
-        <div class="results-cards"></div>
-        <div class="letter-density-container"></div>
+        <div class="results-cards">
+          <div class="box total-characters">
+            <img src="/assets/images/pattern-character-count.svg" alt="" />
+            <h2 class="text-preset-1" id="total-result">299</h2>
+            <p class="text-preset-3">Total Characters</p>
+          </div>
+          <div class="box word-count">
+            <img src="/assets/images/pattern-word-count.svg" alt="" />
+            <h2 class="text-preset-1" id="word-result">299</h2>
+            <p class="text-preset-3">Word Count</p>
+          </div>
+          <div class="box sentence-count">
+            <img src="/assets/images/pattern-sentence-count.svg" alt="" />
+            <h2 class="text-preset-1" id="sentence-result">299</h2>
+            <p class="text-preset-3">Sentence Count</p>
+          </div>
+        </div>
+        <div class="letter-density-container text-preset-4">
+          <div class="bar-container bar-container-1">
+            <p class="letter1">A</p>
+            <div class="bar">
+              <div class="bar-percent-1"></div>
+            </div>
+            <p class="percent">50%(16.55)</p>
+          </div>
+          <div class="bar-container bar-container-2">
+            <p class="letter2">E</p>
+            <div class="bar">
+              <div class="bar-percent-2"></div>
+            </div>
+            <p class="percent">50%(16.55)</p>
+          </div>
+          <div class="bar-container bar-container-3">
+            <p class="letter3">I</p>
+            <div class="bar">
+              <div class="bar-percent-3"></div>
+            </div>
+            <p class="percent">50%(16.55)</p>
+          </div>
+          <div class="bar-container bar-container-4">
+            <p class="letter4">O</p>
+            <div class="bar">
+              <div class="bar-percent-4"></div>
+            </div>
+            <p class="percent">50%(16.55)</p>
+          </div>
+          <div class="bar-container bar-container-5">
+            <p class="letter5">U</p>
+            <div class="bar">
+              <div class="bar-percent-5"></div>
+            </div>
+            <p class="percent">50%(16.55)</p>
+          </div>
+        </div>
       </div>
     </div>
 
