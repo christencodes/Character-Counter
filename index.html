@@ -40,21 +40,35 @@
               </div>
 
               <div class="checkbox2">
-                <input
-                  type="checkbox"
-                  id="chracter-limit"
-                  name="chracter-limit"
-                  value="chracter-limit"
-                />
-                <label for="chracter-limit" class="text-preset-4"
-                  >Set Character Limit</label
-                >
+                <div class="checkbox2-checkbox">
+                  <input
+                    type="checkbox"
+                    id="character-limit"
+                    name="character-limit"
+                    value="character-limit"
+                  />
+                  <label for="character-limit" class="text-preset-4"
+                    >Set Character Limit</label
+                  >
+                </div>
+
+                <div class="checkbox2-input text-preset-4">
+                  <input
+                    type="number"
+                    id="character-limit-input"
+                    minlength="1"
+                    maxlength="3"
+                    class="hide-me"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
           <div class="reading-time">
-            <p class="text-preset-4">Approx. reading time <1minute</p>
+            <p class="text-preset-4">
+              Approx. reading time : <span id="time"> 1</span> minute(s)
+            </p>
           </div>
         </div>
       </div>
@@ -78,37 +92,37 @@
         </div>
         <div class="letter-density-container text-preset-4">
           <div class="bar-container bar-container-1">
-            <p class="letter1">A</p>
+            <p id="A">A</p>
             <div class="bar">
-              <div class="bar-percent-1"></div>
+              <div class="bar-percent-A"></div>
             </div>
             <p class="percent">50%(16.55)</p>
           </div>
           <div class="bar-container bar-container-2">
-            <p class="letter2">E</p>
+            <p id="E">E</p>
             <div class="bar">
-              <div class="bar-percent-2"></div>
+              <div class="bar-percent-E"></div>
             </div>
             <p class="percent">50%(16.55)</p>
           </div>
           <div class="bar-container bar-container-3">
-            <p class="letter3">I</p>
+            <p id="I">I</p>
             <div class="bar">
-              <div class="bar-percent-3"></div>
+              <div class="bar-percent-I"></div>
             </div>
             <p class="percent">50%(16.55)</p>
           </div>
           <div class="bar-container bar-container-4">
-            <p class="letter4">O</p>
+            <p id="O">O</p>
             <div class="bar">
-              <div class="bar-percent-4"></div>
+              <div class="bar-percent-O"></div>
             </div>
             <p class="percent">50%(16.55)</p>
           </div>
           <div class="bar-container bar-container-5">
-            <p class="letter5">U</p>
+            <p id="U">U</p>
             <div class="bar">
-              <div class="bar-percent-5"></div>
+              <div class="bar-percent-U"></div>
             </div>
             <p class="percent">50%(16.55)</p>
           </div>
