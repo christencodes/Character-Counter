@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/christencodes/Character-Counter)
-- Live Site URL: [Add live site URL here](https://christencodes.github.io/Character-Counter/)
+- Solution URL: [Repo](https://github.com/christencodes/Character-Counter)
+- Live Site URL: [Site](https://christencodes.github.io/Character-Counter/)
 
 ## My process
 
