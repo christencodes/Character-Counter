@@ -88,6 +88,8 @@ function themeSwitch() {
   projectContainer.classList.toggle("project-container-light");
   themeToggle.classList.toggle("light-toggle");
 
+  document.body.classList.toggle("body-light");
+
   projectContainer.classList.contains("project-container-light")
     ? (themeToggleImg.src = "./assets/images/icon-moon.svg")
     : (themeToggleImg.src = "./assets/images/icon-sun.svg");
@@ -95,6 +97,8 @@ function themeSwitch() {
   projectContainer.classList.contains("project-container-light")
     ? (logoImg.src = "./assets/images/logo-light-theme.svg")
     : (logoImg.src = "./assets/images/logo-dark-theme.svg");
+
+  //! Also need to add a class for the body
 }
 
 // * Object(s)
@@ -127,14 +131,12 @@ const analyzeText = {
       // console.log(vowel);
       this.vowelsCount[vowel] = 0;
     }
-
     arr.forEach((element) => {
       if (this.vowelsList.includes(element)) {
         this.vowelsCount[element]++;
-        // console.log(`${element} : ${this.vowelsCount[element]}`);
       }
     });
-    console.log("done");
+    // console.log("done");
   },
   updateVowelUI(arr) {
     this.densityCounter(arr);

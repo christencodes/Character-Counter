@@ -185,8 +185,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 48px;
-
-  /* Dark Theme */
 }
 
 .project-container > * {
@@ -448,6 +446,10 @@ input[type="checkbox"]::before {
 }
 
 /** Light Theme **/
+
+.body-light {
+  background-color: white;
+}
 
 .project-container-light {
   background-color: white;
