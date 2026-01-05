@@ -1,5 +1,10 @@
 "use strict";
 
+const projectContainer = document.querySelector(".project-container");
+
+const logoImg = document.getElementById("logo");
+const themeToggle = document.getElementById("theme-toggle");
+const themeToggleImg = document.getElementById("theme-toggle-image");
 const userInput = document.getElementById("userInput");
 
 // ----------------
@@ -22,9 +27,15 @@ const barI = document.querySelector(".bar-percent-I");
 const barO = document.querySelector(".bar-percent-O");
 const barU = document.querySelector(".bar-percent-U");
 
-const barsArray = [barA, barE, barI, barO, barU];
+const percentA = document.querySelector(".percent-A");
+const percentE = document.querySelector(".percent-E");
+const percentI = document.querySelector(".percent-I");
+const percentO = document.querySelector(".percent-O");
+const percentU = document.querySelector(".percent-U");
 
 // *Event Listeners
+
+themeToggle.addEventListener("click", themeSwitch);
 userInput.addEventListener("keydown", (e) => {
   let currentUserInput = [...userInput.value];
 
@@ -69,7 +80,24 @@ characterLimitOption.addEventListener("click", () => {
   characterLimitInput.classList.toggle("hide-me");
 });
 
-// * Objects
+// * --------------------------------------------------
+
+//* Helper Functions
+
+function themeSwitch() {
+  projectContainer.classList.toggle("project-container-light");
+  themeToggle.classList.toggle("light-toggle");
+
+  projectContainer.classList.contains("project-container-light")
+    ? (themeToggleImg.src = "./assets/images/icon-moon.svg")
+    : (themeToggleImg.src = "./assets/images/icon-sun.svg");
+
+  projectContainer.classList.contains("project-container-light")
+    ? (logoImg.src = "./assets/images/logo-light-theme.svg")
+    : (logoImg.src = "./assets/images/logo-dark-theme.svg");
+}
+
+// * Object(s)
 const analyzeText = {
   vowelsList: ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"],
   punctuationList: [".", "!", "?"],
@@ -117,22 +145,33 @@ const analyzeText = {
       this.vowelsCount.a,
       this.characterCount
     )}%`;
+    percentA.textContent = `${this.vowelsCount.a} (${barA.style.width})`;
+    //!-------------------------------------------------
+
     barE.style.width = `${this.djPettiHelperFunction(
       this.vowelsCount.e,
       this.characterCount
     )}%`;
+    percentE.textContent = `${this.vowelsCount.e} (${barE.style.width})`;
+    //!-------------------------------------------------
     barI.style.width = `${this.djPettiHelperFunction(
       this.vowelsCount.i,
       this.characterCount
     )}%`;
+    percentI.textContent = `${this.vowelsCount.i} (${barI.style.width})`;
+    //!-------------------------------------------------
     barO.style.width = `${this.djPettiHelperFunction(
       this.vowelsCount.o,
       this.characterCount
     )}%`;
+    percentO.textContent = `${this.vowelsCount.o} (${barO.style.width})`;
+    //!-------------------------------------------------
     barU.style.width = `${this.djPettiHelperFunction(
       this.vowelsCount.u,
       this.characterCount
     )}%`;
+    percentU.textContent = `${this.vowelsCount.u} (${barU.style.width})`;
+    //!-------------------------------------------------
   },
 
   djPettiHelperFunction(vowelCount, chracterCount) {
